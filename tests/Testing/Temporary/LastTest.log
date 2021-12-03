@@ -1,3 +1,24 @@
-Start testing: Dec 03 22:15 EET
+Start testing: Dec 03 22:47 EET
 ----------------------------------------------------------
-End testing: Dec 03 22:15 EET
+1/1 Testing: test1
+1/1 Test: test1
+Command: "/Users/rosie.elize/Programming/Repositories/datastream-median/tests/build/test1"
+Directory: /Users/rosie.elize/Programming/Repositories/datastream-median/tests
+"test1" start time: Dec 03 22:47 EET
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "1.2.9"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:      1 |      1 passed |      0 failed |      0 skipped
+[doctest] assertions:      1 |      1 passed |      0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test1" end time: Dec 03 22:47 EET
+"test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 03 22:47 EET
