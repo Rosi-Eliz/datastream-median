@@ -14,9 +14,8 @@ class BinaryHeap
     public:
     BinaryHeap() : values()
     {
-        // Compile-time check
+        // Compile-time type check
         static_assert(std::is_arithmetic<T>::value, "T must be an arithmetic type");
-
     }
 
     ~BinaryHeap()
@@ -29,7 +28,7 @@ class BinaryHeap
         return values.empty();
     }
 
-    U32 size()
+    size_t size()
     {
         return values.size();
     }
@@ -64,7 +63,7 @@ class BinaryHeap
             return;
         }
 
-        if( (index1 >= values.size() || index2 >= values.size()) || (index1 < 0 || index2 < 0) )
+        if( (index1 >= size() || index2 >= size()) || (index1 < 0 || index2 < 0) )
         {
             throw std::out_of_range("Index out of range");
         }

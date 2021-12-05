@@ -5,6 +5,7 @@
 template <typename T>
 class MinHeap : public BinaryHeap<T>
 {
+public:
     using BinaryHeap<T>::values;
     using BinaryHeap<T>::parentNode;
     using BinaryHeap<T>::leftNode;
@@ -13,15 +14,14 @@ class MinHeap : public BinaryHeap<T>
     using BinaryHeap<T>::isEmpty;
     using BinaryHeap<T>::size;
     using typename BinaryHeap<T>::U32;
-
-public:
+    
     void insertElement(T element) override
     {
         values.push_back(element);
         U32 index = size() - 1;
         while (index != 0 && values[index] < values[parentNode(index)])
         {
-            swapElements(values[index], values[parentNode(index)]);
+            swapElements(index, parentNode(index));
             index = parentNode(index);
         }
     }
@@ -43,7 +43,7 @@ public:
         return min;
     }
 
-private: 
+private:
     void heapify(U32 index)
     {
         U32 left = leftNode(index);
@@ -59,7 +59,7 @@ private:
         }
         if (smallest != index)
         {
-            swapElements(values[index], values[smallest]);
+            swapElements(index, smallest);
             heapify(smallest);
         }
     }

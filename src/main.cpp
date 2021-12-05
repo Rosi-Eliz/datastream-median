@@ -1,26 +1,92 @@
 #include <iostream>
-#include "MaxHeap.hpp"
-#include "MinHeap.hpp"
+#include <string>
+#include <regex>
+#include <sstream>
+#include <algorithm>
+#include "Median.hpp"
 
-int main() {
-    MaxHeap<int> maxHeap;
-    MinHeap<int> minHeap;
+bool isInputFraction(const std::string &input) 
+{
+    std::regex delimiter("^[-]?(0|[1-9]+)(.|,)[0-9]*$");
+    return regex_match(input, delimiter);
+}
 
-    minHeap.insertElement(5);
-    minHeap.insertElement(3);
-    minHeap.insertElement(1);
-    minHeap.insertElement(4);
-    minHeap.insertElement(2);
+bool isInputInteger(const std::string &input) 
+{
+    std::regex pattern("^(0|[1-9][0-9]*)$");
+    return regex_match(input, pattern);
+}
 
-    maxHeap.insertElement(5);
-    maxHeap.insertElement(3);
-    maxHeap.insertElement(1);
-    maxHeap.insertElement(4);
-    maxHeap.insertElement(2);
+std::vector<std::string> &split(const std::string &input, char delimeter, std::vector<std::string> &elements)
+{
+    std::stringstream ss(input);
+    std::string item;
+    while (std::getline(ss, item, delimeter))
+    {
+        if (item.length() > 0)
+        {
+            elements.push_back(item);
+        }
+    }
+    return elements;
+}
 
-    std::cout<<"Minheap peek: " << minHeap.peek()<<std::endl;
-    std::cout<<"Maxheap peek: " << maxHeap.peek()<<std::endl;
+std::vector<std::string> split(const std::string &input, char delimeter)
+{
+    std::vector<std::string> elements;
+    split(input, delimeter, elements);
+    return elements;
+}
 
-    std::cout << "Hello, World!" << std::endl;
+void print(std::vector<std::string> input)
+{
+    for (std::string s : input)
+        std::cout << s << std::endl;
+}
+
+int main()
+{
+    std::cout << "Enter your values, separated by a blank space: " << std::endl;
+    std::string input;
+    getline(std::cin, input);
+    auto tokens = split(input, ' ');
+
+    if (std::all_of(tokens.begin(), tokens.end(), [](const std::string &token)
+                    { return isInputFraction(token); }))
+    {
+        std::vector<double> elements;
+        for (std::string s : tokens)
+        {
+            elements.push_back(std::stod(s));
+        }
+        Median<double> median;
+        for (int element : elements)
+        {
+            median.addElement(element);
+        }
+
+        std::cout << "Median: " << median.getMedian() << std::endl;
+    }
+    else if (std::all_of(tokens.begin(), tokens.end(), [](const std::string &token)
+                         { return isInputInteger(token); }))
+    {
+        std::vector<int> elements;
+        for (std::string s : tokens)
+        {
+            elements.push_back(std::stoi(s));
+        }
+
+        Median<int> median;
+        for (int element : elements)
+        {
+            median.addElement(element);
+        }
+        std::cout << "Median: " << median.getMedian() << std::endl;
+    }
+    else
+    {
+        print(tokens);
+        throw std::runtime_error("Invalid input");
+    }
     return 0;
 }

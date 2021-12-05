@@ -4,7 +4,8 @@
 
 template <typename T>
 class MaxHeap : public BinaryHeap<T>
-{
+{ 
+public:
     using BinaryHeap<T>::values;
     using BinaryHeap<T>::parentNode;
     using BinaryHeap<T>::leftNode;
@@ -13,15 +14,14 @@ class MaxHeap : public BinaryHeap<T>
     using BinaryHeap<T>::isEmpty;
     using BinaryHeap<T>::size;
     using typename BinaryHeap<T>::U32;
-  
-public:
+
     void insertElement(T element) override
     {
         values.push_back(element);
-        U32 index = values.size() - 1;
+        U32 index = size() - 1;
         while (index != 0 && values[index] > values[parentNode(index)])
         {
-            swapElements(values[index], values[parentNode(index)]);
+            swapElements(index, parentNode(index));
             index = parentNode(index);
         }
     }
@@ -58,7 +58,7 @@ public:
         }
         if (largest != index)
         {
-            swapElements(values[index], values[largest]);
+            swapElements(index, largest);
             heapify(largest);
         }
     }

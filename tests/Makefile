@@ -140,41 +140,41 @@ test_main/fast:
 .PHONY : test_main/fast
 
 #=============================================================================
-# Target rules for targets named test1
+# Target rules for targets named minHeapTests
 
 # Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
+minHeapTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 minHeapTests
+.PHONY : minHeapTests
 
 # fast build rule for target.
-test1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+minHeapTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minHeapTests.dir/build.make CMakeFiles/minHeapTests.dir/build
+.PHONY : minHeapTests/fast
 
-test1.o: test1.cpp.o
-.PHONY : test1.o
+minHeapTests.o: minHeapTests.cpp.o
+.PHONY : minHeapTests.o
 
 # target to build an object file
-test1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test1.cpp.o
-.PHONY : test1.cpp.o
+minHeapTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minHeapTests.dir/build.make CMakeFiles/minHeapTests.dir/minHeapTests.cpp.o
+.PHONY : minHeapTests.cpp.o
 
-test1.i: test1.cpp.i
-.PHONY : test1.i
+minHeapTests.i: minHeapTests.cpp.i
+.PHONY : minHeapTests.i
 
 # target to preprocess a source file
-test1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test1.cpp.i
-.PHONY : test1.cpp.i
+minHeapTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minHeapTests.dir/build.make CMakeFiles/minHeapTests.dir/minHeapTests.cpp.i
+.PHONY : minHeapTests.cpp.i
 
-test1.s: test1.cpp.s
-.PHONY : test1.s
+minHeapTests.s: minHeapTests.cpp.s
+.PHONY : minHeapTests.s
 
 # target to generate assembly for a file
-test1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test1.cpp.s
-.PHONY : test1.cpp.s
+minHeapTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minHeapTests.dir/build.make CMakeFiles/minHeapTests.dir/minHeapTests.cpp.s
+.PHONY : minHeapTests.cpp.s
 
 test_main.o: test_main.cpp.o
 .PHONY : test_main.o
@@ -209,11 +209,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... test1"
+	@echo "... minHeapTests"
 	@echo "... test_main"
-	@echo "... test1.o"
-	@echo "... test1.i"
-	@echo "... test1.s"
+	@echo "... minHeapTests.o"
+	@echo "... minHeapTests.i"
+	@echo "... minHeapTests.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"
