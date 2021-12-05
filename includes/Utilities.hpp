@@ -2,6 +2,7 @@
 #define UTILITIES_HPP
 #include <vector>
 #include <string>
+#include <iostream>
 #include <sstream>
 #include <regex>
 
@@ -28,7 +29,7 @@ std::vector<std::string> split(const std::string &input, char delimeter)
 
 bool isInputFraction(const std::string &input) 
 {
-    std::regex delimiter("^[-]?(0|[1-9]+)(.|,)[0-9]*$");
+    std::regex delimiter("^(-?(\\d+)?(\\.|\\,)\\d+)$");
     return regex_match(input, delimiter);
 }
 

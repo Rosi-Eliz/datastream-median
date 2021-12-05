@@ -152,6 +152,93 @@ minHeapTests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minHeapTests.dir/build.make CMakeFiles/minHeapTests.dir/build
 .PHONY : minHeapTests/fast
 
+#=============================================================================
+# Target rules for targets named maxHeapTests
+
+# Build rule for target.
+maxHeapTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 maxHeapTests
+.PHONY : maxHeapTests
+
+# fast build rule for target.
+maxHeapTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maxHeapTests.dir/build.make CMakeFiles/maxHeapTests.dir/build
+.PHONY : maxHeapTests/fast
+
+#=============================================================================
+# Target rules for targets named medianTests
+
+# Build rule for target.
+medianTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 medianTests
+.PHONY : medianTests
+
+# fast build rule for target.
+medianTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medianTests.dir/build.make CMakeFiles/medianTests.dir/build
+.PHONY : medianTests/fast
+
+#=============================================================================
+# Target rules for targets named utilitiesTests
+
+# Build rule for target.
+utilitiesTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utilitiesTests
+.PHONY : utilitiesTests
+
+# fast build rule for target.
+utilitiesTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utilitiesTests.dir/build.make CMakeFiles/utilitiesTests.dir/build
+.PHONY : utilitiesTests/fast
+
+maxHeapTests.o: maxHeapTests.cpp.o
+.PHONY : maxHeapTests.o
+
+# target to build an object file
+maxHeapTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maxHeapTests.dir/build.make CMakeFiles/maxHeapTests.dir/maxHeapTests.cpp.o
+.PHONY : maxHeapTests.cpp.o
+
+maxHeapTests.i: maxHeapTests.cpp.i
+.PHONY : maxHeapTests.i
+
+# target to preprocess a source file
+maxHeapTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maxHeapTests.dir/build.make CMakeFiles/maxHeapTests.dir/maxHeapTests.cpp.i
+.PHONY : maxHeapTests.cpp.i
+
+maxHeapTests.s: maxHeapTests.cpp.s
+.PHONY : maxHeapTests.s
+
+# target to generate assembly for a file
+maxHeapTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/maxHeapTests.dir/build.make CMakeFiles/maxHeapTests.dir/maxHeapTests.cpp.s
+.PHONY : maxHeapTests.cpp.s
+
+medianTests.o: medianTests.cpp.o
+.PHONY : medianTests.o
+
+# target to build an object file
+medianTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medianTests.dir/build.make CMakeFiles/medianTests.dir/medianTests.cpp.o
+.PHONY : medianTests.cpp.o
+
+medianTests.i: medianTests.cpp.i
+.PHONY : medianTests.i
+
+# target to preprocess a source file
+medianTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medianTests.dir/build.make CMakeFiles/medianTests.dir/medianTests.cpp.i
+.PHONY : medianTests.cpp.i
+
+medianTests.s: medianTests.cpp.s
+.PHONY : medianTests.s
+
+# target to generate assembly for a file
+medianTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medianTests.dir/build.make CMakeFiles/medianTests.dir/medianTests.cpp.s
+.PHONY : medianTests.cpp.s
+
 minHeapTests.o: minHeapTests.cpp.o
 .PHONY : minHeapTests.o
 
@@ -200,6 +287,30 @@ test_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/test_main.cpp.s
 .PHONY : test_main.cpp.s
 
+utilitiesTests.o: utilitiesTests.cpp.o
+.PHONY : utilitiesTests.o
+
+# target to build an object file
+utilitiesTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utilitiesTests.dir/build.make CMakeFiles/utilitiesTests.dir/utilitiesTests.cpp.o
+.PHONY : utilitiesTests.cpp.o
+
+utilitiesTests.i: utilitiesTests.cpp.i
+.PHONY : utilitiesTests.i
+
+# target to preprocess a source file
+utilitiesTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utilitiesTests.dir/build.make CMakeFiles/utilitiesTests.dir/utilitiesTests.cpp.i
+.PHONY : utilitiesTests.cpp.i
+
+utilitiesTests.s: utilitiesTests.cpp.s
+.PHONY : utilitiesTests.s
+
+# target to generate assembly for a file
+utilitiesTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utilitiesTests.dir/build.make CMakeFiles/utilitiesTests.dir/utilitiesTests.cpp.s
+.PHONY : utilitiesTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,14 +320,26 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... maxHeapTests"
+	@echo "... medianTests"
 	@echo "... minHeapTests"
 	@echo "... test_main"
+	@echo "... utilitiesTests"
+	@echo "... maxHeapTests.o"
+	@echo "... maxHeapTests.i"
+	@echo "... maxHeapTests.s"
+	@echo "... medianTests.o"
+	@echo "... medianTests.i"
+	@echo "... medianTests.s"
 	@echo "... minHeapTests.o"
 	@echo "... minHeapTests.i"
 	@echo "... minHeapTests.s"
 	@echo "... test_main.o"
 	@echo "... test_main.i"
 	@echo "... test_main.s"
+	@echo "... utilitiesTests.o"
+	@echo "... utilitiesTests.i"
+	@echo "... utilitiesTests.s"
 .PHONY : help
 
 

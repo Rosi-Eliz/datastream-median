@@ -49,4 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_main.dir/DependInfo.cmake"
   "CMakeFiles/minHeapTests.dir/DependInfo.cmake"
+  "CMakeFiles/maxHeapTests.dir/DependInfo.cmake"
+  "CMakeFiles/medianTests.dir/DependInfo.cmake"
+  "CMakeFiles/utilitiesTests.dir/DependInfo.cmake"
   )

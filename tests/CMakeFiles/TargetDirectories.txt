@@ -1,5 +1,8 @@
 /Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/test_main.dir
 /Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/minHeapTests.dir
+/Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/maxHeapTests.dir
+/Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/medianTests.dir
+/Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/utilitiesTests.dir
 /Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/test.dir
 /Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/edit_cache.dir
 /Users/rosie.elize/Programming/Repositories/datastream-median/tests/CMakeFiles/rebuild_cache.dir
