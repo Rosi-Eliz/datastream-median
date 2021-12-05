@@ -1,48 +1,7 @@
 #include <iostream>
-#include <string>
-#include <regex>
-#include <sstream>
 #include <algorithm>
 #include "Median.hpp"
-
-bool isInputFraction(const std::string &input) 
-{
-    std::regex delimiter("^[-]?(0|[1-9]+)(.|,)[0-9]*$");
-    return regex_match(input, delimiter);
-}
-
-bool isInputInteger(const std::string &input) 
-{
-    std::regex pattern("^(0|[1-9][0-9]*)$");
-    return regex_match(input, pattern);
-}
-
-std::vector<std::string> &split(const std::string &input, char delimeter, std::vector<std::string> &elements)
-{
-    std::stringstream ss(input);
-    std::string item;
-    while (std::getline(ss, item, delimeter))
-    {
-        if (item.length() > 0)
-        {
-            elements.push_back(item);
-        }
-    }
-    return elements;
-}
-
-std::vector<std::string> split(const std::string &input, char delimeter)
-{
-    std::vector<std::string> elements;
-    split(input, delimeter, elements);
-    return elements;
-}
-
-void print(std::vector<std::string> input)
-{
-    for (std::string s : input)
-        std::cout << s << std::endl;
-}
+#include "Utilities.hpp"
 
 int main()
 {
