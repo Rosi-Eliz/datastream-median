@@ -32,8 +32,8 @@ make
 
 In order to execute the tests the following commands should be run from the same folder:
 ```
-./minHeapTests
-./maxHeapTests
-./medianTests
-./utilitiesTests
+./build/minHeapTests
+./build/maxHeapTests
+./bbuild/medianTests
+./build/utilitiesTests
 ```
